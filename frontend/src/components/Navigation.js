@@ -32,7 +32,7 @@ const Navigation = () => {
       animate={{ y: 0 }}
       className={`fixed w-full z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-white/95 backdrop-blur-md shadow-lg border-b border-primary/10'
+          ? 'bg-white/95 backdrop-blur-md shadow-lg border-b border-neutral-gray-200'
           : 'bg-transparent'
       }`}
     >
@@ -42,16 +42,16 @@ const Navigation = () => {
           <Link to="/" className="flex items-center space-x-3">
             <Logo 
               className="w-10 h-6 lg:w-12 lg:h-8" 
-              variant={isScrolled ? "primary" : "white"} 
+              variant={isScrolled ? "black" : "white"} 
             />
             <div className="flex flex-col">
               <span className={`font-playfair font-bold text-lg lg:text-xl ${
-                isScrolled ? 'text-primary' : 'text-white'
+                isScrolled ? 'text-black' : 'text-white'
               }`}>
                 Arikekpar & Company
               </span>
               <span className={`text-xs lg:text-sm ${
-                isScrolled ? 'text-primary/70' : 'text-white/80'
+                isScrolled ? 'text-neutral-gray-600' : 'text-white/80'
               }`}>
                 Your Dream, Our Voice
               </span>
@@ -67,11 +67,11 @@ const Navigation = () => {
                 className={`relative font-inter font-medium transition-colors duration-200 ${
                   location.pathname === item.path
                     ? isScrolled
-                      ? 'text-primary'
-                      : 'text-accent'
+                      ? 'text-black'
+                      : 'text-white'
                     : isScrolled
-                    ? 'text-neutral-dark hover:text-primary'
-                    : 'text-white hover:text-accent'
+                    ? 'text-neutral-gray-700 hover:text-black'
+                    : 'text-white/80 hover:text-white'
                 }`}
               >
                 {item.name}
@@ -79,7 +79,7 @@ const Navigation = () => {
                   <motion.div
                     layoutId="activeTab"
                     className={`absolute -bottom-1 left-0 right-0 h-0.5 ${
-                      isScrolled ? 'bg-primary' : 'bg-accent'
+                      isScrolled ? 'bg-black' : 'bg-white'
                     }`}
                   />
                 )}
@@ -90,7 +90,7 @@ const Navigation = () => {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-accent hover:bg-accent-600 text-white px-6 py-2.5 rounded-full font-inter font-semibold transition-colors duration-200 shadow-lg"
+              className="bg-black hover:bg-neutral-gray-800 text-white px-6 py-2.5 rounded-full font-inter font-semibold transition-colors duration-200 shadow-lg"
             >
               Book Consultation
             </motion.button>
@@ -101,7 +101,7 @@ const Navigation = () => {
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className={`lg:hidden p-2 rounded-lg transition-colors ${
               isScrolled
-                ? 'text-neutral-dark hover:bg-primary/10'
+                ? 'text-black hover:bg-neutral-gray-100'
                 : 'text-white hover:bg-white/10'
             }`}
           >
@@ -117,7 +117,7 @@ const Navigation = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden bg-white border-t border-primary/10"
+            className="lg:hidden bg-white border-t border-neutral-gray-200"
           >
             <div className="px-4 py-6 space-y-4">
               {navItems.map((item) => (
@@ -127,14 +127,14 @@ const Navigation = () => {
                   onClick={() => setIsMobileMenuOpen(false)}
                   className={`block font-inter font-medium py-2 transition-colors ${
                     location.pathname === item.path
-                      ? 'text-primary'
-                      : 'text-neutral-dark hover:text-primary'
+                      ? 'text-black'
+                      : 'text-neutral-gray-700 hover:text-black'
                   }`}
                 >
                   {item.name}
                 </Link>
               ))}
-              <button className="w-full bg-accent hover:bg-accent-600 text-white px-6 py-3 rounded-full font-inter font-semibold transition-colors duration-200 mt-4">
+              <button className="w-full bg-black hover:bg-neutral-gray-800 text-white px-6 py-3 rounded-full font-inter font-semibold transition-colors duration-200 mt-4">
                 Book Consultation
               </button>
             </div>
