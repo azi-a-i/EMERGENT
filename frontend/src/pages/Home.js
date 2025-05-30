@@ -188,7 +188,7 @@ const Home = () => {
       </section>
 
       {/* Differentiators */}
-      <section className="py-20 bg-primary">
+      <section className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -215,7 +215,7 @@ const Home = () => {
                 viewport={{ once: true }}
                 className="text-center"
               >
-                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300">
+                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 border border-white/10">
                   <h3 className="font-playfair text-2xl font-semibold text-white mb-4">
                     {item.title}
                   </h3>
@@ -230,7 +230,7 @@ const Home = () => {
       </section>
 
       {/* About Preview */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-neutral-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -239,20 +239,20 @@ const Home = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="font-playfair text-4xl md:text-5xl font-bold text-neutral-dark mb-6">
+              <h2 className="font-playfair text-4xl md:text-5xl font-bold text-black mb-6">
                 Bridging Africa's Execution Gap
               </h2>
-              <p className="font-inter text-lg text-neutral-dark/80 mb-6 leading-relaxed">
+              <p className="font-inter text-lg text-neutral-gray-600 mb-6 leading-relaxed">
                 Born from a desire to close the execution gap plaguing 80% of startups and 60% of government projects in Africa, 
                 Arikekpar & Company exists to transform great ideas into scalable outcomes.
               </p>
-              <p className="font-inter text-lg text-neutral-dark/80 mb-8 leading-relaxed">
+              <p className="font-inter text-lg text-neutral-gray-600 mb-8 leading-relaxed">
                 Unlike traditional consulting firms that stop at advice, we provide hands-on execution support 
                 across brand identity, legal structuring, startup development, and government project delivery.
               </p>
               <Link
                 to="/about"
-                className="inline-flex items-center bg-primary hover:bg-primary-600 text-white px-6 py-3 rounded-full font-inter font-semibold transition-colors duration-200"
+                className="inline-flex items-center bg-black hover:bg-neutral-gray-800 text-white px-6 py-3 rounded-full font-inter font-semibold transition-colors duration-200"
               >
                 Learn Our Story
                 <ArrowRight size={20} className="ml-2" />
@@ -269,16 +269,16 @@ const Home = () => {
               <img
                 src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c"
                 alt="Team collaboration"
-                className="rounded-2xl shadow-2xl"
+                className="rounded-2xl shadow-2xl filter grayscale"
               />
-              <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent rounded-2xl"></div>
+              <div className="absolute inset-0 bg-gradient-to-tr from-black/20 to-transparent rounded-2xl"></div>
             </motion.div>
           </div>
         </div>
       </section>
 
       {/* Final CTA */}
-      <section className="py-20 bg-gradient-to-r from-primary to-primary-600">
+      <section className="py-20 bg-gradient-to-r from-black to-neutral-gray-800">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -294,7 +294,7 @@ const Home = () => {
             </p>
             <Link
               to="/contact"
-              className="inline-flex items-center bg-accent hover:bg-accent-600 text-white px-8 py-4 rounded-full font-inter font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-xl"
+              className="inline-flex items-center bg-white hover:bg-neutral-gray-200 text-black px-8 py-4 rounded-full font-inter font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-xl"
             >
               Get Started Today
               <ArrowRight size={20} className="ml-2" />
