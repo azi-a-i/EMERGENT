@@ -125,7 +125,7 @@ const Home = () => {
       </section>
 
       {/* Services Overview */}
-      <section className="py-20 bg-neutral-light">
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -134,10 +134,10 @@ const Home = () => {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="font-playfair text-4xl md:text-5xl font-bold text-neutral-dark mb-4">
+            <h2 className="font-playfair text-4xl md:text-5xl font-bold text-black mb-4">
               Our Services
             </h2>
-            <p className="font-inter text-xl text-neutral-dark/80 max-w-3xl mx-auto">
+            <p className="font-inter text-xl text-neutral-gray-600 max-w-3xl mx-auto">
               Comprehensive solutions designed to bridge the execution gap and deliver measurable results.
             </p>
           </motion.div>
@@ -151,31 +151,31 @@ const Home = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 whileHover={{ y: -10 }}
-                className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group"
+                className="bg-neutral-gray-100 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group border border-neutral-gray-200"
               >
                 <div className="aspect-w-16 aspect-h-9 relative overflow-hidden">
                   <img
                     src={service.image}
                     alt={service.title}
-                    className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
+                    className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500 filter grayscale"
                   />
-                  <div className="absolute inset-0 bg-primary/20 group-hover:bg-primary/30 transition-colors duration-300"></div>
+                  <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors duration-300"></div>
                 </div>
                 <div className="p-6">
                   <div className="flex items-center mb-4">
-                    <div className="p-3 bg-primary/10 rounded-full text-primary group-hover:bg-primary group-hover:text-white transition-all duration-300">
+                    <div className="p-3 bg-black/10 rounded-full text-black group-hover:bg-black group-hover:text-white transition-all duration-300">
                       {service.icon}
                     </div>
                   </div>
-                  <h3 className="font-playfair text-xl font-semibold text-neutral-dark mb-3">
+                  <h3 className="font-playfair text-xl font-semibold text-black mb-3">
                     {service.title}
                   </h3>
-                  <p className="font-inter text-neutral-dark/70 mb-4">
+                  <p className="font-inter text-neutral-gray-600 mb-4">
                     {service.description}
                   </p>
                   <Link
                     to="/services"
-                    className="inline-flex items-center font-inter font-semibold text-primary hover:text-accent transition-colors duration-200"
+                    className="inline-flex items-center font-inter font-semibold text-black hover:text-neutral-gray-600 transition-colors duration-200"
                   >
                     Learn More
                     <ArrowRight size={16} className="ml-1" />
