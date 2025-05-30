@@ -15,6 +15,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #ffffff;
+  color: #000000;
 }
 
 code {
@@ -32,12 +34,12 @@ code {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #015C4B;
+  background: #000000;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #014A3C;
+  background: #333333;
 }
 
 /* Glass morphism utility */
@@ -61,7 +63,12 @@ code {
 }
 
 .gradient-animate {
-  background: linear-gradient(-45deg, #015C4B, #C2A14D, #015C4B, #C2A14D);
+  background: linear-gradient(-45deg, #000000, #404040, #000000, #404040);
   background-size: 400% 400%;
   animation: gradientShift 15s ease infinite;
+}
+
+/* Black and white theme specifics */
+.filter-bw {
+  filter: grayscale(1) contrast(1.2);
 }
