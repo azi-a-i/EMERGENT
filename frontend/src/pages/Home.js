@@ -71,7 +71,7 @@ const Home = () => {
           >
             We Don't Just Consult.
             <br />
-            <span className="text-accent">We Deliver.</span>
+            <span className="text-white border-b-4 border-white">We Deliver.</span>
           </motion.h1>
           
           <motion.p
