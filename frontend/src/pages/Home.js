@@ -93,14 +93,14 @@ const Home = () => {
           >
             <Link
               to="/contact"
-              className="bg-accent hover:bg-accent-600 text-white px-8 py-4 rounded-full font-inter font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-xl flex items-center gap-2"
+              className="bg-black hover:bg-neutral-gray-800 text-white px-8 py-4 rounded-full font-inter font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-xl flex items-center gap-2"
             >
               Book Consultation
               <ArrowRight size={20} />
             </Link>
             <Link
               to="/services"
-              className="border-2 border-white text-white hover:bg-white hover:text-primary px-8 py-4 rounded-full font-inter font-semibold text-lg transition-all duration-300 hover:scale-105"
+              className="border-2 border-white text-white hover:bg-white hover:text-black px-8 py-4 rounded-full font-inter font-semibold text-lg transition-all duration-300 hover:scale-105"
             >
               Explore Services
             </Link>
