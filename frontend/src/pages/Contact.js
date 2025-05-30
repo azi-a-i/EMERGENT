@@ -19,19 +19,40 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Form submission logic would go here
-    console.log('Form submitted:', formData);
-    setIsSubmitted(true);
-    setTimeout(() => setIsSubmitted(false), 3000);
-    setFormData({
-      name: '',
-      email: '',
-      organization: '',
-      service: '',
-      message: ''
-    });
+    
+    try {
+      const backendUrl = process.env.REACT_APP_BACKEND_URL || import.meta.env.REACT_APP_BACKEND_URL;
+      
+      const response = await fetch(`${backendUrl}/api/contact`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData)
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
+        setIsSubmitted(true);
+        setTimeout(() => setIsSubmitted(false), 5000);
+        setFormData({
+          name: '',
+          email: '',
+          organization: '',
+          service: '',
+          message: ''
+        });
+      } else {
+        console.error('Form submission failed:', result);
+        alert('Failed to submit form. Please try again or contact us directly.');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      alert('Failed to submit form. Please try again or contact us directly.');
+    }
   };
 
   const contactInfo = [
