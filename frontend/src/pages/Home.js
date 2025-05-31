@@ -292,13 +292,11 @@ const Home = () => {
             <p className="font-inter text-xl text-white/90 mb-8">
               Ready to bridge the gap between vision and execution? Let's start the conversation.
             </p>
-            <Link
-              to="/contact"
-              className="inline-flex items-center bg-white hover:bg-neutral-gray-200 text-black px-8 py-4 rounded-full font-inter font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-xl"
-            >
-              Get Started Today
-              <ArrowRight size={20} className="ml-2" />
-            </Link>
+            <CalendlyBooking 
+              text="Get Started Today"
+              variant="secondary"
+              className="px-8 py-4 text-lg bg-white hover:bg-gray-200 text-black border-0"
+            />
           </motion.div>
         </div>
       </section>
