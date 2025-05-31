@@ -122,9 +122,11 @@ const Navigation = () => {
                   {item.name}
                 </Link>
               ))}
-              <button className="w-full bg-black hover:bg-neutral-gray-800 text-white px-6 py-3 rounded-full font-inter font-semibold transition-colors duration-200 mt-4">
-                Book Consultation
-              </button>
+              <CalendlyBooking 
+                text="Book Consultation"
+                variant="primary"
+                className="w-full py-3 mt-4"
+              />
             </div>
           </motion.div>
         )}
