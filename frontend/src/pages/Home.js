@@ -92,18 +92,17 @@ const Home = () => {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
-            <Link
-              to="/contact"
-              className="bg-black hover:bg-neutral-gray-800 text-white px-8 py-4 rounded-full font-inter font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-xl flex items-center gap-2"
-            >
-              Book Consultation
-              <ArrowRight size={20} />
-            </Link>
+            <CalendlyBooking 
+              text="Book Consultation"
+              variant="primary"
+              className="px-8 py-4 text-lg"
+            />
             <Link
               to="/services"
-              className="border-2 border-white text-white hover:bg-white hover:text-black px-8 py-4 rounded-full font-inter font-semibold text-lg transition-all duration-300 hover:scale-105"
+              className="border-2 border-white text-white hover:bg-white hover:text-black px-8 py-4 rounded-full font-inter font-semibold text-lg transition-all duration-300 hover:scale-105 inline-flex items-center gap-2"
             >
               Explore Services
+              <ArrowRight size={20} />
             </Link>
           </motion.div>
         </div>
