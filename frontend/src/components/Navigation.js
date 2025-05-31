@@ -77,13 +77,11 @@ const Navigation = () => {
             ))}
             
             {/* CTA Button */}
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-black hover:bg-neutral-gray-800 text-white px-6 py-2.5 rounded-full font-inter font-semibold transition-colors duration-200 shadow-lg"
-            >
-              Book Consultation
-            </motion.button>
+            <CalendlyBooking 
+              text="Book Consultation"
+              variant="primary"
+              className="text-sm"
+            />
           </div>
 
           {/* Mobile Menu Button */}
