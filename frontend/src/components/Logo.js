@@ -1,7 +1,14 @@
 import React, { useState } from 'react';
+import { useLocation } from 'react-router-dom';
 
 const Logo = ({ className = "h-8 w-auto", showText = true, isDark = false }) => {
   const [logoError, setLogoError] = useState(false);
+  const location = useLocation();
+  
+  // Determine which logo to use based on current page
+  const isHomepage = location.pathname === '/';
+  const logoFile = isHomepage ? '/arikekpar_logo.png' : '/arikekpar_logo2.png';
+  
   const logoColor = isDark ? "#000000" : "#ffffff";
   const textColor = isDark ? "text-black" : "text-white";
   const taglineColor = isDark ? "text-gray-600" : "text-white/80";
