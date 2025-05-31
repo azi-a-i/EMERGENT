@@ -39,23 +39,11 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 lg:h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-3">
+          <Link to="/" className="flex items-center">
             <Logo 
-              className="w-10 h-6 lg:w-12 lg:h-8" 
-              variant={isScrolled ? "black" : "white"} 
+              className="h-8 w-auto" 
+              showText={true}
             />
-            <div className="flex flex-col">
-              <span className={`font-playfair font-bold text-lg lg:text-xl ${
-                isScrolled ? 'text-black' : 'text-white'
-              }`}>
-                Arikekpar & Company
-              </span>
-              <span className={`text-xs lg:text-sm ${
-                isScrolled ? 'text-neutral-gray-600' : 'text-white/80'
-              }`}>
-                Your Dream, Our Voice
-              </span>
-            </div>
           </Link>
 
           {/* Desktop Navigation */}
