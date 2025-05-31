@@ -51,8 +51,14 @@ const Logo = ({ className = "h-8 w-auto", showText = true, isDark = false }) => 
             src="/arikekpar_logo.png" 
             alt="Arikekpar & Company Logo"
             className={`${className} object-contain`}
-            onError={() => setLogoError(true)}
-            onLoad={() => setLogoError(false)}
+            onError={() => {
+              console.log('Logo file not found, using SVG fallback');
+              setLogoError(true);
+            }}
+            onLoad={() => {
+              console.log('Logo loaded successfully');
+              setLogoError(false);
+            }}
           />
         ) : (
           <SVGLogo />
