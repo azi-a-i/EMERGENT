@@ -9,6 +9,12 @@ const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
+  
+  // Determine if we're on homepage - this affects initial header styling
+  const isHomepage = location.pathname === '/';
+  
+  // For non-homepage, we want the header to be visible from the start
+  const shouldShowDarkHeader = !isHomepage || isScrolled;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,6 +24,11 @@ const Navigation = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // Close mobile menu when route changes
+  useEffect(() => {
+    setIsMobileMenuOpen(false);
+  }, [location.pathname]);
 
   const navItems = [
     { name: 'Home', path: '/' },
@@ -31,9 +42,9 @@ const Navigation = () => {
     <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      className={`fixed w-full z-50 transition-all duration-300 ${
-        isScrolled
-          ? 'bg-white/95 backdrop-blur-md shadow-lg border-b border-neutral-gray-200'
+      className={`fixed w-full z-40 transition-all duration-500 ease-in-out ${
+        shouldShowDarkHeader
+          ? 'bg-white/90 backdrop-blur-lg shadow-xl border-b border-gray-200'
           : 'bg-transparent'
       }`}
     >
