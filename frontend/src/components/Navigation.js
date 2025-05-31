@@ -116,7 +116,7 @@ const Navigation = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden bg-white border-t border-neutral-gray-200"
+            className="lg:hidden bg-white/95 backdrop-blur-lg border-t border-gray-200 shadow-xl"
           >
             <div className="px-4 py-6 space-y-4">
               {navItems.map((item) => (
@@ -127,7 +127,7 @@ const Navigation = () => {
                   className={`block font-inter font-medium py-2 transition-colors ${
                     location.pathname === item.path
                       ? 'text-black'
-                      : 'text-neutral-gray-700 hover:text-black'
+                      : 'text-gray-700 hover:text-black'
                   }`}
                 >
                   {item.name}
@@ -135,8 +135,8 @@ const Navigation = () => {
               ))}
               <CalendlyBooking 
                 text="Book Consultation"
-                variant="primary"
-                className="w-full py-3 mt-4"
+                variant="outline"
+                className="w-full py-3 mt-4 relative z-50"
               />
             </div>
           </motion.div>
