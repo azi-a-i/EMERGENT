@@ -269,7 +269,6 @@ test_plan:
   current_focus:
     - "Navigation header UI fixes"
     - "Contact form submission API"
-    - "Logo file implementation"
     - "Calendly integration"
   stuck_tasks: []
   test_all: false
