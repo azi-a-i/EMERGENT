@@ -6,7 +6,7 @@ from datetime import datetime
 import re
 
 # Base URL from frontend/.env
-BASE_URL = "https://493abe61-24f7-4cc0-9dfe-866e1677c6c7.preview.emergentagent.com"
+BASE_URL = "https://bf3f9735-14eb-41ec-9282-a20ad0f6fb0a.preview.emergentagent.com"
 
 def test_health_endpoint():
     """Test the API health endpoint"""
