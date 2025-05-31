@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowRight, CheckCircle, Users, Target, Zap } from 'lucide-react';
+import CalendlyBooking from '../components/CalendlyBooking';
 
 const Home = () => {
   const services = [
