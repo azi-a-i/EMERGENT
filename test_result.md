@@ -234,6 +234,9 @@ frontend:
         - working: true
           agent: "main"
           comment: "Logo file successfully uploaded to /app/frontend/public/arikekpar_logo.png (219KB). Logo component now loads the actual Arikekpar & Company logo image with proper fallback handling. Integration complete."
+        - working: true
+          agent: "main"
+          comment: "Enhanced logo component with conditional loading: Homepage uses arikekpar_logo.png, all other pages (Services, About, Case Studies, Contact) use arikekpar_logo2.png. Both logos (224KB each) properly uploaded and integrated with enhanced contrast handling for all header states."
 
   - task: "Navigation header UI fixes"
     implemented: true
