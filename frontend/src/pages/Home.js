@@ -267,9 +267,9 @@ const Home = () => {
               className="relative"
             >
               <img
-                src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c"
+                src="https://images.unsplash.com/photo-1573497701175-00c200fd57f0?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzh8MHwxfHNlYXJjaHwxfHx0ZWFtJTIwY29sbGFib3JhdGlvbnxlbnwwfHx8Ymx1ZXwxNzQ4NTczNDI3fDA&ixlib=rb-4.1.0&q=85"
                 alt="Team collaboration"
-                className="rounded-2xl shadow-2xl filter grayscale"
+                className="rounded-2xl shadow-2xl"
               />
               <div className="absolute inset-0 bg-gradient-to-tr from-black/20 to-transparent rounded-2xl"></div>
             </motion.div>
