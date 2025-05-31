@@ -8,9 +8,35 @@ const CalendlyBooking = ({
   variant = "primary" 
 }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const [modalRoot, setModalRoot] = useState(null);
 
   // Ask user for their Calendly URL
   const calendlyUrl = "https://calendly.com/arikekpar-company/consultation"; // Placeholder - will be updated
+
+  useEffect(() => {
+    // Create or find modal root element
+    let modalRootElement = document.getElementById('modal-root');
+    if (!modalRootElement) {
+      modalRootElement = document.createElement('div');
+      modalRootElement.id = 'modal-root';
+      modalRootElement.style.position = 'relative';
+      modalRootElement.style.zIndex = '9999';
+      document.body.appendChild(modalRootElement);
+    }
+    setModalRoot(modalRootElement);
+
+    // Prevent body scroll when modal is open
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+
+    // Cleanup function
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isOpen]);
 
   const openCalendly = () => {
     setIsOpen(true);
