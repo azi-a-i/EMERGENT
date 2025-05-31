@@ -37,20 +37,30 @@ const CalendlyBooking = ({
         {text}
       </button>
 
-      {/* Calendly Modal */}
+      {/* Calendly Modal - Fixed positioning with maximum z-index */}
       {isOpen && (
         <div 
-          className="fixed inset-0 bg-black/80 backdrop-blur-sm z-[100] flex items-center justify-center p-4"
+          className="fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4"
+          style={{ 
+            zIndex: 9999,
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0 
+          }}
           onClick={closeCalendly}
         >
           <div 
             className="bg-white rounded-2xl shadow-2xl w-full max-w-4xl h-full max-h-[90vh] relative overflow-hidden"
+            style={{ zIndex: 10000 }}
             onClick={(e) => e.stopPropagation()}
           >
             {/* Close Button */}
             <button
               onClick={closeCalendly}
-              className="absolute top-4 right-4 z-10 bg-black/10 hover:bg-black/20 text-black w-10 h-10 rounded-full flex items-center justify-center text-xl font-bold transition-colors"
+              className="absolute top-4 right-4 bg-black/10 hover:bg-black/20 text-black w-10 h-10 rounded-full flex items-center justify-center text-xl font-bold transition-colors"
+              style={{ zIndex: 10001 }}
             >
               ×
             </button>
