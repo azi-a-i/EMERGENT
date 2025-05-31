@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 import Logo from './Logo';
+import CalendlyBooking from './CalendlyBooking';
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
