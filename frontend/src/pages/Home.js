@@ -59,7 +59,7 @@ const Home = () => {
       <section 
         className="relative h-screen flex items-center justify-center bg-cover bg-center bg-fixed"
         style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url('https://images.pexels.com/photos/4427814/pexels-photo-4427814.jpeg')`
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1530017037147-5faeb810309d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzB8MHwxfHNlYXJjaHwzfHxidXNpbmVzcyUyMHN0cmF0ZWd5fGVufDB8fHxibHVlfDE3NDg2NTAxMDV8MA&ixlib=rb-4.1.0&q=85')`
         }}
       >
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70"></div>
