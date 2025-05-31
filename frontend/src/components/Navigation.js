@@ -43,6 +43,7 @@ const Navigation = () => {
             <Logo 
               className="h-8 w-auto" 
               showText={true}
+              isDark={isScrolled}
             />
           </Link>
 
