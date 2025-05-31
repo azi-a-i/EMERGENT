@@ -64,8 +64,8 @@ const CalendlyBooking = ({
         {text}
       </button>
 
-      {/* Calendly Modal - Fixed positioning with maximum z-index */}
-      {isOpen && (
+      {/* Calendly Modal - Rendered via Portal for maximum z-index control */}
+      {isOpen && modalRoot && createPortal(
         <div 
           className="fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4"
           style={{ 
@@ -120,7 +120,8 @@ const CalendlyBooking = ({
               </div>
             </div>
           </div>
-        </div>
+        </div>,
+        modalRoot
       )}
     </>
   );
