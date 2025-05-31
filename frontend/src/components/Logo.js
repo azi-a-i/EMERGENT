@@ -60,7 +60,7 @@ const Logo = ({ className = "h-8 w-auto", showText = true, isDark = false }) => 
               <div className="absolute inset-0 bg-white/10 rounded-md backdrop-blur-sm"></div>
             )}
             <img 
-              src="/arikekpar_logo.png" 
+              src={logoFile} 
               alt="Arikekpar & Company Logo"
               className={`w-full h-full object-contain relative z-10 ${
                 isDark 
@@ -74,11 +74,11 @@ const Logo = ({ className = "h-8 w-auto", showText = true, isDark = false }) => 
                 imageRendering: 'crisp-edges'
               }}
               onError={() => {
-                console.log('Logo file not found, using SVG fallback');
+                console.log(`Logo file ${logoFile} not found, using SVG fallback`);
                 setLogoError(true);
               }}
               onLoad={() => {
-                console.log('Logo loaded successfully');
+                console.log(`Logo loaded successfully: ${logoFile} for page ${location.pathname}`);
                 setLogoError(false);
               }}
             />
