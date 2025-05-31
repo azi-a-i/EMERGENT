@@ -229,6 +229,18 @@ frontend:
           agent: "main"
           comment: "Logo component exists but requires actual logo file in public folder"
 
+  - task: "Navigation header UI fixes"
+    implemented: true
+    working: "needs_testing"
+    file: "frontend/src/components/Navigation.js, frontend/src/components/CalendlyBooking.js, frontend/src/index.css"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: true
+    status_history:
+        - working: "needs_testing"
+          agent: "main"
+          comment: "Fixed all reported header UI issues: 1) Improved scroll transition with semi-transparent background and smoother animation (duration 500ms with ease-in-out), 2) Fixed header visibility on subpages by detecting homepage vs non-homepage and showing appropriate header state on load, 3) Fixed Calendly dropdown z-index issue by increasing modal z-index to z-[100] and adding relative z-50 to navigation elements, 4) Added scroll-padding-top to prevent content jumping"
+
   - task: "Professional styling and animations"
     implemented: true
     working: true
